@@ -19,15 +19,10 @@ h2 { font-size: 2rem; margin: 0 0 24px; line-height: 1.2; }
 h3 { font-size: 1.1rem; margin: 0 0 12px; }
 p { margin: 0 0 12px; }
 
-/* Focus visible pour la navigation au clavier */
 a:focus-visible, button:focus-visible, .flip:focus-visible {
   outline: 3px solid #d4006f;
   outline-offset: 3px;
 }
-
-/* Lien "Aller au contenu", visible uniquement au clavier */
-.lien-evitement { position: absolute; left: -9999px; top: 16px; padding: 8px 16px; background-color: white; color: #141414; font-weight: bold; z-index: 10; }
-.lien-evitement:focus { left: 16px; }
 
 .page {
   border: 1px solid #a9bddb;
@@ -54,7 +49,6 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
 .etoile { width: 40px; flex-shrink: 0; animation: tourne linear; animation-timeline: scroll(root); }
 .etoile:nth-child(even) { animation-direction: reverse; }
 
-/* En-tête et menu */
 .entete { display: flex; justify-content: space-between; align-items: center; padding: 24px 40px; }
 .logo { font-size: 1.5rem; font-weight: bold; color: #141414; text-decoration: none; }
 
@@ -63,12 +57,10 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
 .menu a:hover { color: #d4006f; }
 .menu a[aria-current="page"] { font-weight: bold; color: #d4006f; border-bottom-color: #ff2d95; }
 
-/* Accueil */
 .accueil { display: flex; align-items: center; gap: 48px; }
 .photo { width: 280px; border-radius: 24px; box-shadow: 14px 14px 0 #ff2d95; transition: transform 0.3s; }
 .photo:hover { transform: rotate(-2deg); }
 
-/* Boutons */
 .boutons { display: flex; justify-content: center; gap: 12px; margin-top: 28px; }
 .bouton { display: inline-block; padding: 12px 24px; border: 2px solid transparent; border-radius: 30px; font-size: 1rem; font-weight: bold; text-decoration: none; cursor: pointer; transition: background-color 0.3s, color 0.3s; }
 .bouton-jaune { background-color: #ffd23f; color: #141414; }
@@ -78,7 +70,6 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
 .bouton-contour { border-color: #141414; background-color: transparent; color: #141414; }
 .bouton-contour:hover { background-color: #141414; color: white; }
 
-/* Grilles et cartes */
 .grille { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .grille-2 { grid-template-columns: repeat(2, 1fr); }
 .grille-4 { grid-template-columns: repeat(4, 1fr); }
@@ -94,20 +85,17 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
 .lien { color: #d4006f; font-weight: bold; }
 .lien:hover { color: #a8005a; }
 
-/* Bloc Epitech */
 .epitech { padding: 28px 32px; margin-bottom: 40px; border-radius: 24px; background-color: #3d63a8; color: white; }
 .epitech h3 { font-size: 2.8rem; margin: 6px 0; }
 
 .badge { display: inline-flex; align-items: center; gap: 8px; padding: 4px 14px; border-radius: 30px; background-color: rgba(0, 0, 0, 0.2); font-size: 0.8rem; }
 .point { width: 8px; height: 8px; border-radius: 50%; background-color: #ffd23f; animation: pulsation 1.8s infinite; }
 
-/* Listes formations / expériences */
 .colonnes { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
 .liste { list-style: none; margin: 0; padding: 0; }
 .liste li { display: flex; flex-direction: column; padding-left: 16px; margin-bottom: 20px; border-left: 3px solid #ff2d95; }
 .date { color: #d4006f; font-size: 0.8rem; font-weight: bold; }
 
-/* Cartes qui se retournent */
 .flip { height: 200px; perspective: 1000px; cursor: pointer; }
 .flip-interieur { position: relative; height: 100%; transition: transform 0.7s; transform-style: preserve-3d; }
 .flip:hover .flip-interieur,
@@ -119,7 +107,6 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
 .face-avant h3 { position: relative; margin-bottom: 14px; padding: 6px 16px; border-radius: 30px; background-color: white; }
 .face-arriere { background-color: #d4006f; color: white; transform: rotateY(180deg); }
 
-/* Contact */
 .contact { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; padding: 40px; border-radius: 24px; background-color: #3d63a8; color: white; }
 .contact h1 { margin-top: 16px; font-size: 2.4rem; }
 .contact h2 { font-size: 1.4rem; margin-bottom: 12px; }
@@ -137,7 +124,6 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: #ffd23f
 input:valid, textarea:valid { border-color: #22c55e; }
 button { margin-top: 16px; }
 
-/* Pied de page */
 .footer { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: 24px 40px; border-top: 1px solid #a9bddb; font-size: 0.85rem; }
 .footer p { margin: 0; }
 .credits { color: #555; font-size: 0.8rem; }
