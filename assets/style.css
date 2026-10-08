@@ -120,9 +120,12 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
 .contact h2 { font-size: 1.4rem; margin-bottom: 12px; }
 .contact a:focus-visible, .contact button:focus-visible { outline-color: #ffd23f; }
 
-.liens { list-style: none; margin: 24px 0 0; padding: 0; }
-.liens li { margin-bottom: 8px; }
-.liens a { color: white; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-bottom: 2px solid #ffd23f; transition: color 0.3s; }
+.email { margin: 24px 0 8px; }
+.email a { color: white; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-bottom: 2px solid #ffd23f; transition: color 0.3s; }
+.email a:hover { color: #ffd23f; }
+
+.liens { display: flex; gap: 12px; list-style: none; margin: 0; padding: 0; }
+.liens a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: white; font-size: 1.6rem; text-decoration: none; transition: color 0.3s; }
 .liens a:hover { color: #ffd23f; }
 
 .formulaire { display: flex; flex-direction: column; gap: 6px; }
@@ -138,6 +141,8 @@ button { margin-top: 16px; }
 .footer-liens { display: flex; flex-wrap: wrap; gap: 16px; list-style: none; margin: 0; padding: 0; }
 .footer a { color: #141414; transition: color 0.3s; }
 .footer a:hover { color: #d4006f; }
+.footer-liens { align-items: center; }
+.footer .reseau { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; font-size: 1.5rem; text-decoration: none; }
 
 @keyframes pulsation {
   0% { box-shadow: 0 0 0 0 rgba(255, 210, 63, 0.7); }

@@ -111,5 +111,7 @@ const anglais = {
   "contact.sujet": "Subject",
   "contact.alternance": "Work-study offer",
   "contact.autre": "Other",
-  "contact.envoyer": "Send message"
+  "contact.envoyer": "Send message",
+  "contact.linkedinAria": "My LinkedIn profile",
+  "contact.githubAria": "My GitHub profile",
 };

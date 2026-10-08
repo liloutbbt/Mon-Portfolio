@@ -1,6 +1,6 @@
 const textes = {
-  fr: { accueil: "Accueil", projets: "Projets", menu: "Menu principal", haut: "Retour en haut ↑", autreLangue: "English version" },
-  en: { accueil: "Home", projets: "Projects", menu: "Main menu", haut: "Back to top ↑", autreLangue: "Version française" }
+  fr: { accueil: "Accueil", projets: "Projets", menu: "Menu principal", haut: "Retour en haut", autreLangue: "English version", github: "Mon profil GitHub", linkedin: "Mon profil LinkedIn" },
+  en: { accueil: "Home", projets: "Projects", menu: "Main menu", haut: "Back to top", autreLangue: "Version française", github: "My GitHub profile", linkedin: "My LinkedIn profile" }
 };
 
 const pageActuelle = location.pathname.split("/").pop() || "index.html";
@@ -61,31 +61,56 @@ function afficherEntete() {
 }
 
 function afficherFooter() {
+  const t = textes[langue];
   document.querySelector(".footer").innerHTML = `
     <div>
       <p>Lilou Tibbaut 2026</p>
     </div>
     <ul class="footer-liens">
-      <li><a href="https://github.com/liloutbbt" target="_blank" rel="noopener">GitHub ↗</a></li>
-      <li><a href="https://www.linkedin.com/in/lilou-tibbaut-952040192/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
-      <li><a href="#haut">${textes[langue].haut}</a></li>
+      <li>
+        <a href="https://github.com/liloutbbt" class="reseau" target="_blank" rel="noopener"
+           aria-label="${t.github}" title="${t.github}">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/lilou-tibbaut-952040192/" class="reseau" target="_blank" rel="noopener"
+           aria-label="${t.linkedin}" title="${t.linkedin}">
+          <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+        </a>
+      </li>
+      <li>
+        <a href="#haut" class="reseau" aria-label="${t.haut}" title="${t.haut}">
+          <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+        </a>
+      </li>
     </ul>`;
 }
 
 const textesFrancais = new WeakMap();
 
+function lire(element, propriete) {
+  return propriete === "innerHTML" ? element.innerHTML : element.getAttribute(propriete);
+}
+
+function ecrire(element, propriete, valeur) {
+  if (propriete === "innerHTML") element.innerHTML = valeur;
+  else element.setAttribute(propriete, valeur);
+}
+
 function traduire(element, propriete, cle) {
   if (!textesFrancais.has(element)) textesFrancais.set(element, {});
   const sauvegarde = textesFrancais.get(element);
-  if (!(propriete in sauvegarde)) sauvegarde[propriete] = element[propriete];
+  if (!(propriete in sauvegarde)) sauvegarde[propriete] = lire(element, propriete);
 
-  element[propriete] = langue === "en" && anglais[cle] ? anglais[cle] : sauvegarde[propriete];
+  ecrire(element, propriete, langue === "en" && anglais[cle] ? anglais[cle] : sauvegarde[propriete]);
 }
 
 function traduirePage() {
   document.querySelectorAll("[data-i18n]").forEach(el => traduire(el, "innerHTML", el.dataset.i18n));
   document.querySelectorAll("[data-i18n-alt]").forEach(el => traduire(el, "alt", el.dataset.i18nAlt));
   document.querySelectorAll("[data-i18n-content]").forEach(el => traduire(el, "content", el.dataset.i18nContent));
+  document.querySelectorAll("[data-i18n-aria]").forEach(el => traduire(el, "aria-label", el.dataset.i18nAria));
 }
 
 function appliquerLangue() {
