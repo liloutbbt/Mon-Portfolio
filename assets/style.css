@@ -52,10 +52,13 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
 .entete { display: flex; justify-content: space-between; align-items: center; padding: 24px 40px; }
 .logo { font-size: 1.5rem; font-weight: bold; color: #141414; text-decoration: none; }
 
-.menu ul { display: flex; gap: 28px; list-style: none; margin: 0; padding: 0; }
+.menu ul { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
 .menu a { padding-bottom: 4px; color: #141414; text-decoration: none; border-bottom: 3px solid transparent; transition: color 0.3s, border-color 0.3s; }
 .menu a:hover { color: #d4006f; }
 .menu a[aria-current="page"] { font-weight: bold; color: #d4006f; border-bottom-color: #ff2d95; }
+.menu .langue { display: inline-flex; align-items: center; margin: 0; padding: 7px 0 0; border: none; border-radius: 3px; background: none; cursor: pointer; }
+.menu .langue svg { display: block; border-radius: 3px; box-shadow: 0 0 0 1px rgba(0,0,0,0.15); transition: transform 0.3s; }
+.menu .langue:hover svg, .menu .langue:focus-visible svg { transform: scale(1.1); }
 
 .accueil { display: flex; align-items: center; gap: 48px; }
 .photo { width: 280px; border-radius: 24px; box-shadow: 14px 14px 0 #ff2d95; transition: transform 0.3s; }
@@ -74,8 +77,13 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
 .grille-2 { grid-template-columns: repeat(2, 1fr); }
 .grille-4 { grid-template-columns: repeat(4, 1fr); }
 
-.carte { padding: 24px; border: 1px solid #a9bddb; border-radius: 20px; background-color: white; transition: transform 0.3s, box-shadow 0.3s; }
-.carte:hover { transform: translateY(-6px); box-shadow: 8px 8px 0 #ff2d95; }
+.carte { padding: 24px; border: 1px solid #a9bddb; border-radius: 20px; background-color: white; }
+
+.carte--cliquable { position: relative; transition: transform 0.3s, box-shadow 0.3s; }
+.carte--cliquable:hover,
+.carte--cliquable:focus-within { transform: translateY(-6px); box-shadow: 8px 8px 0 #ff2d95; }
+.lien-principal::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+.carte--cliquable .carte-liens a:not(.lien-principal) { position: relative; z-index: 1; }
 
 .tags { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; margin: 0 0 12px; padding: 0; }
 .tags li { padding: 3px 12px; border-radius: 30px; background-color: #ffd23f; color: #141414; font-size: 0.8rem; font-weight: bold; }
@@ -136,7 +144,7 @@ button { margin-top: 16px; }
   100% { box-shadow: 0 0 0 8px rgba(255, 210, 63, 0); }
 }
 @keyframes tourne {
-  to { transform: rotate(3600deg); }
+  to { transform: rotate(2000deg); }
 }
 
 @media (max-width: 767px) {
@@ -164,10 +172,4 @@ button { margin-top: 16px; }
 
 @media (min-width: 1024px) {
   .page { max-width: 1000px; margin: 0 auto; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .etoile, .point { animation: none; }
-  .carte, .photo, .flip-interieur { transition: none; }
 }

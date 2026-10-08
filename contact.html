@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Lilou Tibbaut</title>
-    <meta name="description" content="Contacter Lilou Tibbaut pour une alternance en informatique à partir de janvier 2027, à Marseille et alentours.">
+    <title data-i18n="contact.title">Contact | Lilou Tibbaut</title>
+    <meta name="description" content="Contacter Lilou Tibbaut pour une alternance en informatique à partir de janvier 2027, à Marseille et alentours." data-i18n-content="contact.description">
     <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/traductions.js" defer></script>
     <script src="assets/script.js" defer></script>
 </head>
 <body>
@@ -16,11 +17,11 @@
             <section class="section">
                 <div class="contact">
                     <div>
-                        <p class="badge"><span class="point"></span> Disponible pour janvier 2027</p>
-                        <h1>Une alternance ? Parlons-en.</h1>
+                        <p class="badge"><span class="point"></span> <span data-i18n="contact.dispo">Disponible pour janvier 2027</span></p>
+                        <h1 data-i18n="contact.titre">Une alternance ? Parlons-en.</h1>
 
-                        <h2>Coordonnées</h2>
-                        <p>Je recherche une alternance en informatique, plus précisément en IA. Je suis basée à Marseille et ses alentours.</p>
+                        <h2 data-i18n="contact.coordonnees">Coordonnées</h2>
+                        <p data-i18n="contact.texte">Je recherche une alternance en informatique, plus précisément en IA. Je suis basée à Marseille et ses alentours.</p>
                         <ul class="liens">
                             <li><a href="mailto:lilou.tibbaut@gmail.com">lilou.tibbaut@gmail.com</a></li>
                             <li><a href="https://www.linkedin.com/in/lilou-tibbaut-952040192/" target="_blank" rel="noopener">LinkedIn ↗</a></li>
@@ -29,21 +30,21 @@
                     </div>
 
                     <div>
-                        <h2>Formulaire</h2>
+                        <h2 data-i18n="contact.formulaire">Formulaire</h2>
                         <form action="mailto:lilou.tibbaut@gmail.com" method="post" enctype="text/plain" class="formulaire">
-                            <label for="nom">Nom et entreprise</label>
+                            <label for="nom" data-i18n="contact.nom">Nom et entreprise</label>
                             <input type="text" id="nom" name="nom" autocomplete="name" required>
-                            <label for="email">E-mail</label>
+                            <label for="email" data-i18n="contact.email">E-mail</label>
                             <input type="email" id="email" name="email" autocomplete="email" required>
-                            <label for="sujet">Sujet</label>
+                            <label for="sujet" data-i18n="contact.sujet">Sujet</label>
                             <select id="sujet" name="sujet">
-                                <option value="alternance">Proposition d'alternance</option>
+                                <option value="alternance" data-i18n="contact.alternance">Proposition d'alternance</option>
                                 <option value="question">Question</option>
-                                <option value="autre">Autre</option>
+                                <option value="autre" data-i18n="contact.autre">Autre</option>
                             </select>
                             <label for="message">Message</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
-                            <button type="submit" class="bouton bouton-jaune">Envoyer le message</button>
+                            <button type="submit" class="bouton bouton-jaune" data-i18n="contact.envoyer">Envoyer le message</button>
                         </form>
                     </div>
                 </div>

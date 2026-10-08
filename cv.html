@@ -3,9 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon CV | Lilou Tibbaut</title>
-    <meta name="description" content="CV de Lilou Tibbaut : Étudiante en Informatique à Épitech Marseille">
+    <title data-i18n="cv.title">Mon CV | Lilou Tibbaut</title>
+    <meta name="description" content="CV de Lilou Tibbaut : étudiante en informatique à Epitech Marseille" data-i18n-content="cv.description">
     <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/traductions.js" defer></script>
     <script src="assets/script.js" defer></script>
 </head>
 <body>
@@ -14,88 +15,82 @@
 
         <main>
             <section class="section intro">
-                <h1>Mon CV</h1>
-                <a href="assets/cv-lilou-tibbaut.pdf" download class="bouton bouton-jaune">Télécharger en PDF</a>
+                <h1 data-i18n="cv.titre">Mon CV</h1>
+                <a href="assets/cv-lilou-tibbaut.pdf" download class="bouton bouton-jaune" data-i18n="cv.pdf">Télécharger en PDF</a>
             </section>
 
             <div class="separateur"></div>
 
             <section class="section">
-                <h2>Formations</h2>
+                <h2 data-i18n="cv.formations">Formations</h2>
                 <div class="epitech">
-                    <p class="badge"><span class="point"></span> En cours</p>
+                    <p class="badge"><span class="point"></span> <span data-i18n="cv.enCours">En cours</span></p>
                     <h3>Epitech</h3>
-                    <p><strong>3 ème année (Pré-MSC) · Marseille · depuis 2026</strong></p>
-                    <p>Pédagogie par projets : Python, SQL et développement web. Un parcours de 3 ans vers un Master of Science, avec spécialisation l'année prochaine.</p>
+                    <p data-i18n="cv.epitechAnnee"><strong>3<sup>e</sup> année (Pré-MSc) · Marseille · depuis 2026</strong></p>
+                    <p data-i18n="cv.epitechTexte">Pédagogie par projets : Python, SQL et développement web. Un parcours de 3 ans vers un Master of Science, avec spécialisation l'année prochaine.</p>
                     <ul class="tags"><li>Python</li><li>SQL</li><li>HTML</li><li>CSS</li></ul>
                 </div>
                 <ul class="liste">
                     <li>
                         <span class="date">2022 - 2025</span>
-                        <strong>Bachelor Communication et Marketing digital</strong>
-                        <span>ISEG Nantes, 3<sup>e</sup> année à la Corvinus University of Budapest</span>
+                        <strong data-i18n="cv.bachelor">Bachelor Communication et Marketing digital</strong>
+                        <span data-i18n="cv.bachelorLieu">ISEG Nantes, 3<sup>e</sup> année à la Corvinus University of Budapest</span>
                     </li>
                     <li>
                         <span class="date">2019 - 2022</span>
-                        <strong>Bac général, spécialité mathématiques</strong>
-                        <span>Lycée Sainte-Marie-du-Port, Les Sables-d'Olonne</span>
+                        <strong data-i18n="cv.bac">Bac général avec spécialité Maths, Anglais et Géopolitique, option Européenne</strong>
+                        <span data-i18n="cv.bacLieu">Lycée Sainte-Marie-du-Port, Les Sables-d'Olonne</span>
                     </li>
                 </ul>
             </section>
-
-            <div class="separateur"></div>
-
             <section class="section">
-                <h2>Expériences</h2>
+                <h2 data-i18n="cv.experiences">Expériences</h2>
                 <ul class="liste">
                     <li>
                         <span class="date">2023 - 2025</span>
-                        <strong>Responsable marketing et site e-commerce</strong>
-                        <span>Trésors de Cailloux : création du site, analyse des besoins clients et veille concurrentielle</span>
+                        <strong data-i18n="cv.tresors">Responsable marketing et site e-commerce</strong>
+                        <span data-i18n="cv.tresorsTexte">Trésors de Cailloux : création du site, analyse des besoins clients et veille concurrentielle</span>
                     </li>
                     <li>
                         <span class="date">2024 - 2025</span>
-                        <strong>Freelance communication et automatisation</strong>
-                        <span>Micro-entreprise : automatisation de workflows et contenus digitaux pour des commerces locaux</span>
+                        <strong data-i18n="cv.freelance">Freelance communication et automatisation</strong>
+                        <span data-i18n="cv.freelanceTexte">Micro-entreprise : automatisation de workflows et contenus digitaux pour des commerces locaux</span>
                     </li>
                     <li>
-                        <span class="date">Été 2025</span>
-                        <strong>Stagiaire communication</strong>
-                        <span>Mairie des Sables-d'Olonne : gestion de contenus sur le site WordPress</span>
+                        <span class="date" data-i18n="cv.ete2025">Été 2025</span>
+                        <strong data-i18n="cv.stage">Stagiaire communication</strong>
+                        <span data-i18n="cv.stageTexte">Mairie des Sables-d'Olonne : gestion de contenus sur le site WordPress</span>
                     </li>
                     <li>
                         <span class="date">2020 - 2023</span>
-                        <strong>Vendeuse et création du site e-commerce</strong>
-                        <span>Macada Shoes : migration de la vente en boutique vers le web</span>
+                        <strong data-i18n="cv.macada">Vendeuse et création du site e-commerce</strong>
+                        <span data-i18n="cv.macadaTexte">Macada Shoes : migration de la vente en boutique vers le web</span>
                     </li>
                     <li>
-                        <span class="date">Depuis 2021</span>
-                        <strong>Barmaid, chef de rang</strong>
-                        <span>Le Grand Large (La Ciotat) et restaurants des Sables-d'Olonne : logiciels de caisse, planification des équipes, dépannage du matériel en plein service</span>
+                        <span class="date" data-i18n="cv.depuis2021">Depuis 2021</span>
+                        <strong data-i18n="cv.barmaid">Barmaid, chef de rang</strong>
+                        <span data-i18n="cv.barmaidTexte">Le Grand Large (La Ciotat) et restaurants des Sables-d'Olonne : logiciels de caisse, planification des équipes, dépannage du matériel en plein service</span>
                     </li>
                 </ul>
             </section>
-
-            <div class="separateur"></div>
-
             <section class="section">
-                <h2>Compétences</h2>
+                <h2 data-i18n="cv.competences">Compétences</h2>
                 <div class="grille grille-4">
                     <div class="carte">
-                        <h3>Langages</h3>
+                        <h3 data-i18n="cv.langages">Langages</h3>
                         <ul class="tags"><li>Python</li><li>SQL</li><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
                     </div>
                     <div class="carte">
-                        <h3>Web et CMS</h3>
+                        <h3 data-i18n="cv.web">Web et CMS</h3>
                         <ul class="tags"><li>Shopify</li><li>WordPress</li><li>Wix</li></ul>
                     </div>
                     <div class="carte">
-                        <h3>Outils</h3>
-                        <ul class="tags"><li>Git</li><li>Zapier</li><li>Suite Adobe</li></ul>
+                        <h3 data-i18n="cv.outils">Outils</h3>
+                        <ul class="tags"><li>Git</li><li>Zapier</li><li data-i18n="tag.adobe">Suite Adobe</li></ul>
                     </div>
                     <div class="carte">
-                        <h3>Langues</h3>
-                        <ul class="tags"><li>Anglais C1 (Cambridge, TOEIC)</li><li>Espagnol B2</li></ul>
+                        <h3 data-i18n="cv.langues">Langues</h3>
+                        <ul class="tags"><li data-i18n="tag.anglais">Anglais C1 (Cambridge, TOEIC)</li><li data-i18n="tag.espagnol">Espagnol B2</li></ul>
                     </div>
                 </div>
             </section>
@@ -103,39 +98,38 @@
             <div class="separateur"></div>
 
             <section class="section">
-                <h2>En dehors de l'écran</h2>
-                <p><em>Survolez ou touchez une carte pour la retourner.</em></p>
+                <h2 data-i18n="cv.horsEcran">En dehors de l'écran</h2>
                 <div class="grille">
                     <div class="flip" tabindex="0">
                         <div class="flip-interieur">
                             <div class="face face-avant">
-                                <img src="assets/musique.jpg" alt="Guitare et instruments de musique">
-                                <h3>Musique</h3>
+                                <img src="assets/musique.jpg" alt="Guitare et instruments de musique" data-i18n-alt="cv.musiqueAlt">
+                                <h3 data-i18n="cv.musique">Musique</h3>
                             </div>
                             <div class="face face-arriere">
-                                <p>Guitare, basse, piano et chant. J'ai joué dans un groupe : chacun sa partie, mais tout doit tourner ensemble, comme une équipe de dev.</p>
+                                <p data-i18n="cv.musiqueTexte">Guitare, basse, piano et chant. J'ai joué dans un groupe : chacun sa partie, mais tout doit tourner ensemble, comme une équipe de dev.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flip" tabindex="0">
                         <div class="flip-interieur">
                             <div class="face face-avant">
-                                <img src="assets/sport.jpg" alt="Séance de sport">
-                                <h3>Sport</h3>
+                                <img src="assets/sport.jpg" alt="Séance de sport" data-i18n-alt="cv.sportAlt">
+                                <h3 data-i18n="cv.sport">Sport</h3>
                             </div>
                             <div class="face face-arriere">
-                                <p>Ancienne gymnaste, aujourd'hui musculation et course à pied. Discipline, régularité et progression pas à pas.</p>
+                                <p data-i18n="cv.sportTexte">Ancienne gymnaste, aujourd'hui musculation et course à pied. Discipline, régularité et progression pas à pas.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flip" tabindex="0">
                         <div class="flip-interieur">
                             <div class="face face-avant">
-                                <img src="assets/arts.jpg" alt="Peinture et perles">
-                                <h3>Arts manuels</h3>
+                                <img src="assets/arts.jpg" alt="Peinture et perles" data-i18n-alt="cv.artsAlt">
+                                <h3 data-i18n="cv.arts">Arts manuels</h3>
                             </div>
                             <div class="face face-arriere">
-                                <p>Peinture, perles, tout ce qui se fait avec les mains. Patience et souci du détail.</p>
+                                <p data-i18n="cv.artsTexte">Peinture, perles, tout ce qui se fait avec les mains. Patience et souci du détail.</p>
                             </div>
                         </div>
                     </div>
