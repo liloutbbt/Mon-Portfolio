@@ -132,8 +132,7 @@ document.addEventListener("click", e => {
 });
 
 const etoiles = Array.from({ length: 20 }, (_, i) =>
-  `<img src="assets/stars/etoile${i % 5 + 1}.png" alt="" class="etoile">`
-).join("");
+`<img src="assets/stars/etoile${i % 5 + 1}.png" alt="" class="etoile" width="40" height="40">`).join("");
 document.querySelectorAll(".separateur").forEach(s => s.innerHTML = etoiles);
 
 appliquerLangue();
