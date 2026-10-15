@@ -109,7 +109,7 @@ const anglais = {
   "contact.dispo": "Available from January 2027",
   "contact.titre": "Looking for a work-study student? Let's talk.",
   "contact.coordonnees": "Contact details",
-  "contact.texte": "I'm looking for a work-study position in computer science, specifically in AI. I'm based in and around Marseille.",
+  "contact.texte": "I'm looking for a work-study position in computer science, specifically in web development or AI. I'm based in and around Marseille.",
   "contact.formulaire": "Contact form",
   "contact.nom": "Name and company",
   "contact.email": "Email",
