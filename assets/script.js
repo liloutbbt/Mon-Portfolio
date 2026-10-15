@@ -131,8 +131,7 @@ document.addEventListener("click", e => {
   document.querySelector(".langue").focus();
 });
 
-const etoiles = Array.from({ length: 20 }, (_, i) =>
-`<img src="assets/stars/etoile${i % 5 + 1}.png" alt="" class="etoile" width="40" height="40">`).join("");
-document.querySelectorAll(".separateur").forEach(s => s.innerHTML = etoiles);
+const etoile = `<svg class="etoile" width="22" height="22" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1 L14.2 9.8 L23 12 L14.2 14.2 L12 23 L9.8 14.2 L1 12 L9.8 9.8 Z"/></svg>`;
+document.querySelectorAll(".separateur").forEach(s => s.innerHTML = etoile);
 
 appliquerLangue();

@@ -38,16 +38,27 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
   height: 44px;
-  overflow: hidden;
-  background-image: linear-gradient(#a9bddb, #a9bddb);
+  background-image: linear-gradient(90deg,
+    transparent 40px, #a9bddb 40px,
+    #a9bddb calc(50% - 26px), transparent calc(50% - 26px),
+    transparent calc(50% + 26px), #a9bddb calc(50% + 26px),
+    #a9bddb calc(100% - 40px), transparent calc(100% - 40px));
   background-size: 100% 1px;
   background-position: center;
   background-repeat: no-repeat;
 }
-.etoile { width: 40px; flex-shrink: 0; animation: tourne linear; animation-timeline: scroll(root); }
-.etoile:nth-child(even) { animation-direction: reverse; }
+.etoile {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  fill: #ffd23f;
+  stroke: #10375d;
+  stroke-width: 1.2;
+  transform-origin: center;
+  animation: tourne linear;
+  animation-timeline: scroll(root);
+}
 
 .entete { display: flex; justify-content: space-between; align-items: center; min-height: 90px; padding: 24px 40px; }.logo { font-size: 1.5rem; font-weight: bold; color: #141414; text-decoration: none; }
 
@@ -169,7 +180,11 @@ button { margin-top: 16px; }
   body { padding: 32px 24px; }
   h1 { font-size: 2.5rem; }
   .photo { width: 220px; }
-  .grille, .grille-4 { grid-template-columns: repeat(2, 1fr); }
+  .grille-4 { grid-template-columns: repeat(2, 1fr); }
+
+  .grille:not(.grille-2):not(.grille-4) { grid-template-columns: repeat(4, 1fr); }
+  .grille:not(.grille-2):not(.grille-4) > * { grid-column: span 2; }
+  .grille:not(.grille-2):not(.grille-4) > :last-child:nth-child(odd) { grid-column: 2 / span 2; }
 }
 
 @media (min-width: 1024px) {
