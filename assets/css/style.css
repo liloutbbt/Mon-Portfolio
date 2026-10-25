@@ -24,6 +24,10 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
   outline-offset: 3px;
 }
 
+.lien-evitement { position: absolute; top: -100px; left: 16px; z-index: 10; padding: 10px 18px; border-radius: 30px; background-color: #141414; color: white; font-weight: bold; text-decoration: none; }
+.lien-evitement:focus { top: 16px; }
+main:focus { outline: none; }
+
 .page {
   border: 1px solid #a9bddb;
   background-color: white;
@@ -60,7 +64,8 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
   animation-timeline: scroll(root);
 }
 
-.entete { display: flex; justify-content: space-between; align-items: center; min-height: 90px; padding: 24px 40px; }.logo { font-size: 1.5rem; font-weight: bold; color: #141414; text-decoration: none; }
+.entete { display: flex; justify-content: space-between; align-items: center; min-height: 90px; padding: 24px 40px; }
+.logo { font-size: 1.5rem; font-weight: bold; color: #141414; text-decoration: none; }
 
 .menu ul { display: flex; align-items: center; gap: 28px; list-style: none; margin: 0; padding: 0; }
 .menu a { padding-bottom: 4px; color: #141414; text-decoration: none; border-bottom: 3px solid transparent; transition: color 0.3s, border-color 0.3s; }
@@ -71,7 +76,8 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
 .menu .langue:hover svg, .menu .langue:focus-visible svg { transform: scale(1.1); }
 
 .accueil { display: flex; align-items: center; gap: 48px; }
-.photo { width: 280px; height: auto; border-radius: 24px; box-shadow: 14px 14px 0 #ff2d95; transition: transform 0.3s; }.photo:hover { transform: rotate(-2deg); }
+.photo { width: 280px; height: auto; border-radius: 24px; box-shadow: 14px 14px 0 #ff2d95; transition: transform 0.3s; }
+.photo:hover { transform: rotate(-2deg); }
 
 .boutons { display: flex; justify-content: center; gap: 12px; margin-top: 28px; }
 .bouton { display: inline-block; padding: 12px 24px; border: 2px solid transparent; border-radius: 30px; font-size: 1rem; font-weight: bold; text-decoration: none; cursor: pointer; transition: background-color 0.3s, color 0.3s; }
@@ -130,8 +136,9 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
 .contact a:focus-visible, .contact button:focus-visible { outline-color: #ffd23f; }
 
 .email { margin: 24px 0 8px; }
-.email a { color: white; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-bottom: 2px solid #ffd23f; transition: color 0.3s; }
-.email a:hover { color: #ffd23f; }
+.telephone { margin: 0 0 8px; }
+.email a, .telephone a { color: white; font-size: 1.1rem; font-weight: bold; text-decoration: none; border-bottom: 2px solid #ffd23f; transition: color 0.3s; }
+.email a:hover, .telephone a:hover { color: #ffd23f; }
 
 .liens { display: flex; gap: 12px; list-style: none; margin: 0; padding: 0; }
 .liens a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; color: white; font-size: 1.6rem; text-decoration: none; transition: color 0.3s; }
@@ -140,17 +147,16 @@ a:focus-visible, button:focus-visible, .flip:focus-visible {
 .formulaire { display: flex; flex-direction: column; gap: 6px; }
 label { margin-top: 8px; font-size: 0.85rem; font-weight: bold; }
 input, select, textarea { padding: 12px; border: 2px solid white; border-radius: 12px; font-family: inherit; font-size: 1rem; transition: border-color 0.3s; }
-input:focus, select:focus, textarea:focus { outline: none; border-color: #ffd23f; }
 input:valid, textarea:valid { border-color: #22c55e; }
+input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #ffd23f; outline-offset: 2px; border-color: #ffd23f; }
 button { margin-top: 16px; }
 
 .footer { display: flex; justify-content: space-between; align-items: flex-start; gap: 24px; padding: 24px 40px; border-top: 1px solid #a9bddb; font-size: 0.85rem; }
 .footer p { margin: 0; }
 .credits { color: #555; font-size: 0.8rem; }
-.footer-liens { display: flex; flex-wrap: wrap; gap: 16px; list-style: none; margin: 0; padding: 0; }
+.footer-liens { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; list-style: none; margin: 0; padding: 0; }
 .footer a { color: #141414; transition: color 0.3s; }
 .footer a:hover { color: #d4006f; }
-.footer-liens { align-items: center; }
 .footer .reseau { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; font-size: 1.5rem; text-decoration: none; }
 
 @keyframes pulsation {
@@ -163,7 +169,8 @@ button { margin-top: 16px; }
 
 @media (max-width: 767px) {
   body { padding: 20px 12px; }
-  .entete { flex-direction: column; gap: 12px; min-height: 120px; padding: 20px; }  .menu ul { gap: 16px; }
+  .entete { flex-direction: column; gap: 12px; min-height: 120px; padding: 20px; }
+  .menu ul { gap: 16px; }
   .section { padding: 48px 20px; }
   h1, .contact h1 { font-size: 2rem; }
   h2 { font-size: 1.6rem; }

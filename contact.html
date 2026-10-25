@@ -4,17 +4,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="contact.title">Contact | Lilou Tibbaut</title>
-    <meta name="description" content="Contacter Lilou Tibbaut pour une alternance en informatique à partir de janvier 2027, à Marseille et alentours." data-i18n-content="contact.description">
+    <meta name="description" content="Contacter Lilou Tibbaut pour une alternance de 30 mois en IA, data ou développement web à partir de janvier 2027, à Marseille et alentours." data-i18n-content="contact.description">
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>    <link rel="stylesheet" href="assets/style.css">
-    <script src="assets/traductions.js" defer></script>
-    <script src="assets/script.js" defer></script>
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/traductions.js" defer></script>
+    <script src="assets/js/script.js" defer></script>
 </head>
 <body>
+    <a href="#contenu" class="lien-evitement" data-i18n="commun.evitement">Aller au contenu</a>
     <div class="page">
         <header class="entete" id="haut"></header>
 
-        <main>
+        <main id="contenu" tabindex="-1">
             <section class="section">
                 <div class="contact">
                     <div>
@@ -22,8 +24,9 @@
                         <h1 data-i18n="contact.titre">Une alternance ? Parlons-en.</h1>
 
                         <h2 data-i18n="contact.coordonnees">Coordonnées</h2>
-                        <p data-i18n="contact.texte">Je recherche une alternance en informatique, plus précisément en IA &amp; data ou en développement web. Je suis basée à Marseille et ses alentours.</p>
+                        <p data-i18n="contact.texte">Je recherche une alternance de 30 mois en IA &amp; data ou en développement web, à partir de janvier 2027. Rythme : 4 semaines en entreprise, 2 semaines à l'école. Je suis basée à Marseille et ses alentours.</p>
                         <p class="email"><a href="mailto:lilou.tibbaut@gmail.com">lilou.tibbaut@gmail.com</a></p>
+                        <p class="telephone"><a href="tel:+33771258966">07 71 25 89 66</a></p>
                         <ul class="liens">
                             <li>
                                 <a href="https://www.linkedin.com/in/lilou-tibbaut-952040192/" target="_blank" rel="noopener" aria-label="Mon profil LinkedIn" title="LinkedIn" data-i18n-aria="contact.linkedinAria">
@@ -48,10 +51,10 @@
                             <label for="sujet" data-i18n="contact.sujet">Sujet</label>
                             <select id="sujet" name="sujet">
                                 <option value="alternance" data-i18n="contact.alternance">Proposition d'alternance</option>
-                                <option value="question">Question</option>
+                                <option value="question" data-i18n="contact.question">Question</option>
                                 <option value="autre" data-i18n="contact.autre">Autre</option>
                             </select>
-                            <label for="message">Message</label>
+                            <label for="message" data-i18n="contact.message">Message</label>
                             <textarea id="message" name="message" rows="5" required></textarea>
                             <button type="submit" class="bouton bouton-jaune" data-i18n="contact.envoyer">Envoyer le message</button>
                         </form>
