@@ -41,6 +41,29 @@ h2 { font-size: 2rem; margin: 0 0 24px; line-height: 1.2; }
 h3 { font-size: 1.1rem; margin: 0 0 12px; }
 p { margin: 0 0 12px; }
 
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--fond);
+  border-left: 1px solid var(--bordure);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--rose);
+  border: 3px solid var(--fond);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--rose-fonce);
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  html {
+    scrollbar-color: var(--rose) var(--fond);
+    scrollbar-width: auto;
+  }
+}
+
 
 a:focus-visible,
 button:focus-visible,
